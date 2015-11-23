@@ -4,7 +4,7 @@
 
 #Define Variables
 $cred = Get-Credential
-$ucs = ucs01
+$ucs = "ucs01"
 $startvlan = "100"
 $endvlan = "150"
 $vnictemplate = "vnic-template"
