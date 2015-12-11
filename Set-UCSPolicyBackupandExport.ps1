@@ -3,15 +3,15 @@
 # http://davidstamen.com
 
 #Define Variables
-$UCS = "FQDNofUCS"
-$Hostname = "ucs.lab.local"
-$Protocol = "scp"
-$User = "ftpuser"
-$Password = "ftpuser"
-$MgmtBackupRemoteFile = "Full"
-$ConfigBackupRemoteFile = "AllConfig"
-$AdminState = "enable"
-$Schedule = "1day"
+$UCS = "FQDNofUCS" #FQDN of UCS To COnnect To
+$Hostname = "ucs.lab.local" #Hostname to Upload backup to.
+$Protocol = "scp" #Transfer Protocol. ftp,scp,tftp,sftp
+$User = "ftpuser" #Username
+$Password = "ftpuser" #Password
+$MgmtBackupRemoteFile = "Full" #Location/Prefix of File. Location/Prefix will be in front of filename
+$ConfigBackupRemoteFile = "AllConfig" #Location/Prefix of File. Location/Prefix will be in front of filename
+$AdminState = "enable" #enable or disable
+$Schedule = "1day" #1day, 7day, 14day for daily, weekly or biweekly backups
 
 #Import UCS Module
 Import-Module *UCS*
