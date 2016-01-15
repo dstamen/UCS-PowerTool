@@ -7,6 +7,7 @@ $cred = Get-Credential
 $domains = "ucs01.lab.local","ucs02.lab.local"
 
 #Cycles through each UCS setting values
+#This script is currently setup to be applied to Rack Units. To have this work for blades, change the Get-UCSRackUnit and Set-UCSRackunit to be Get-UCSBlade and Set-UCSBlade.
 Foreach ($ucs in $domains) {
   Connect-UCS $ucs -Credential $cred
   $servers = Get-UCSRackUnit
